@@ -361,6 +361,7 @@ select {
 #section4 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 #section4 .we-text {
   -webkit-text-stroke: 1px #ffffff;
@@ -369,6 +370,7 @@ select {
   background: linear-gradient(180deg, #305d52 0%, #153f38 100%);
   color: #ffffff;
   padding: 6rem;
+  border-radius: 6px;
 }
 
 #section4 .text-heading {
@@ -398,6 +400,15 @@ select {
   line-height: 28px;
 }
 
+.publichImg {
+  width: 755px;
+  height: 708px;
+  top: 2349px;
+  left: 685px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
 footer {
   padding-block: 2.25rem;
   background-color: #eaeaea;
@@ -412,16 +423,17 @@ footer > div {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+/* Tablet screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
-    height: auto;
-    padding: 150px 20px 50px;
-  }
-
-  .hero-content {
-    max-width: 100%;
+    padding: 50px 20px;
   }
 
   .contact-form {
@@ -429,8 +441,79 @@ footer > div {
     margin-top: 20px;
   }
 
-  .prev,
-  .next {
-    display: none;
+  .image-container {
+    grid-template-columns: 1fr;
+  }
+
+  .text-content {
+    grid-template-columns: 1fr;
+  }
+
+  #section4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+
+  .contact-form h2 {
+    font-size: 24px;
+  }
+
+  .contact-form button[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .text-heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .text-box {
+    font-size: 12px;
+  }
+
+  #success-btn {
+    font-size: 16px;
+  }
+
+  .btn-container {
+    grid-template-columns: 1fr;
+  }
+
+  #section4 .green-section {
+    padding: 3rem;
+  }
+
+  #section4 .text-heading {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  #section4 ul {
+    padding-inline-start: 1rem;
+  }
+
+  #section4 li > strong {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  #section4 li > p {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
